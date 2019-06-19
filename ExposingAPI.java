@@ -1,6 +1,10 @@
 package com.mock.project1.DemoMock;
 
+import javax.validation.Valid;
+
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -44,6 +48,14 @@ public class ExposingAPI {
         String uname = user.username;
         String pwd = user.password;
         return uname + pwd + id;
+    }
+
+    // we can check request body has all fields corresponding to our User class by @Valid annotation, but, then User class instance variables have to use @NotNull annotation
+    // due to this, atleast all variables declared in User class must be present in RequestBody. else put call in postman gives error
+    @PutMapping(path = "api/v2/{tenantID}", consumes = "application/json")
+    public ResponseEntity exposePutAPI2(@PathVariable(value = "tenantID") String id, @Valid @RequestBody User user) {
+
+        return new ResponseEntity<User>(user, HttpStatus.OK); // we can return whatever we want along with some HTTP Status code
     }
 
     @DeleteMapping(value = "/api/v1/{tenantID}")

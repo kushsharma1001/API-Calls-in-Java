@@ -1,7 +1,12 @@
 package com.mock.project1.DemoMock;
 
+import javax.validation.constraints.NotNull;
+
 public class User {
+    @NotNull
     String username;
+
+    @NotNull
     String password;
 
     public String getUsername() {
