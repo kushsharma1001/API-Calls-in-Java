@@ -1,2 +1,2 @@
-# API-Calls-in-Java
-This is a collection of techniques for making different HTTP verbs based API calls
+# Exposing API-Calls-in-Java
+This sections tells how to create/expose APIs for different HTTP verbs in a Spring boot project
