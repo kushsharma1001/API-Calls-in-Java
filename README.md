@@ -6,4 +6,4 @@ Prerequisite : Just download a Spring initializr project using WEB dependency. (
                Then, Add User class and ExosingAPI class in your project.
                Done, you are good to go. Run your @SpringBootApplication class.
           
-How to Test APIs exposed in porject : Open Postman and try different calls there as shown in Image uploaded.
+How to Test APIs exposed in project : Open Postman and try different calls there as shown in Image uploaded.
