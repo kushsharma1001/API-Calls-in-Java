@@ -1,4 +1,4 @@
-# Exposing API-Calls-in-Java
+# Exposing API Endpoints-in-Java
 This sections tells how to create/expose APIs for different HTTP verbs in a Spring boot project
 
 Prerequisite : Just download a Spring initializr project using WEB dependency. (jar)
