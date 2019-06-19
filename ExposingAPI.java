@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -14,6 +15,12 @@ public class ExposingAPI {
     @GetMapping(value = "api/v1/{tenantID}")
     public String exposeGetAPI(@PathVariable(value = "tenantID") final String id) {
         return "result here is : " + id;
+    }
+
+    // postman call would look like: http://localhost:8080/api/v1?count=12&size=2
+    @GetMapping(value = "api/v1")
+    public String exposeGetAPI2(@RequestParam(value = "count") final String number, @RequestParam(value = "size") final String length) {
+        return "result here is : " + number + length;
     }
 
     // this takes json as body in postman and then maps what all json fields and values are available as instance variables in User class.
