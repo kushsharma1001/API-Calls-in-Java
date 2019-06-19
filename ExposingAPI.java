@@ -1,5 +1,6 @@
 package com.mock.project1.DemoMock;
 
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,7 +25,8 @@ public class ExposingAPI {
     }
 
     // this takes json as body in postman and then maps what all json fields and values are available as instance variables in User class.
-    @PostMapping(path = "api/v1", consumes = "application/json")
+    // if consumes=application/xml, then to map input with a User type class, then we need to add dependency for jackson-dataformat-xml in pom
+    @PostMapping(path = "api/v1", consumes = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
     public String exposePostAPI(@RequestBody User user)
     {
         String uname = user.username;

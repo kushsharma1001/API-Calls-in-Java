@@ -28,18 +28,27 @@
 		</dependency>
 
 		<dependency>
-		<!--for live reload i.e. do any change in code and if app is running it takes all changes into account...-->
+			<!--for live reload i.e. do any change in code and if app is running it 
+				takes all changes into account... -->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-		
+
 		<dependency>
 			<!--for test dependencies like @Test etc... -->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 		</dependency>
-	
+
+		<dependency>
+		<!-- this is for xml to java object mapping and vice versa-->
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+			<version>2.9.9</version>
+		</dependency>
+
+
 	</dependencies>
-	
+
 </project>
