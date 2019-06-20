@@ -9,3 +9,6 @@ Prerequisite : Just download a Spring initializr project using WEB dependency. (
 How to Test APIs exposed in project : Open Postman and try different calls there as shown in Image uploaded.
 
 Note: Incase our api methods throw exception due to some reason (arrayIndexOutOfBound, null.toString() etc) then, we should create a new class as shown in exception.png pic
+
+
+Note: I encouarge you to create a Spring boot project and try to use given classes and run the project on your own. Still, if you face difficulty, please use attached zip file to import fully functional spring boot project. 
