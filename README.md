@@ -12,3 +12,5 @@ Note: Incase our api methods throw exception due to some reason (arrayIndexOutOf
 
 
 Note: I encouarge you to create a Spring boot project and try to use given classes and run the project on your own. Still, if you face difficulty, please use attached zip file to import fully functional spring boot project. 
+
+* (Work in Project Explorer in Eclipse. In order to add a new class, package etc,)
